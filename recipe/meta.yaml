@@ -13,7 +13,7 @@ source:
   patches: ESMP_LoadESMF.patch
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win or py3k]
 
 requirements:
