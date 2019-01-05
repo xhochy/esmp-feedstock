@@ -18,14 +18,16 @@ build:
 
 requirements:
   build:
+    - perl
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - numpy
-    - gcc 
-    - perl
   run:
     - python
     - numpy
-    - libgcc
 
 test:
   imports:
@@ -37,11 +39,11 @@ about:
   license_file: ESMP/LICENSE
   summary: 'ESMP is a Python interface to ESMF grid remapping functions'
   description: |
-    SMF is software for building and coupling weather, climate, and related models.  
-    It has a robust, parallel and scalable remapping package, used to generate remapping weights.  
-    It can handle a wide variety of grids and options:  logically rectangular 
-    grids and unstructured meshes; regional or global grids; 2D or 3D; and pole and 
-    masking options.  
+    SMF is software for building and coupling weather, climate, and related models.
+    It has a robust, parallel and scalable remapping package, used to generate remapping weights.
+    It can handle a wide variety of grids and options:  logically rectangular
+    grids and unstructured meshes; regional or global grids; 2D or 3D; and pole and
+    masking options.
   dev_url: http://www.netlib.org/clapack://www.earthsystemcog.org/projects/esmp/releases
 
 extra:
