@@ -1,4 +1,3 @@
-package:
 {% set name = "esmp" %}
 {% set version = "ESMF_6_3_0rp1_ESMP_01" %}
 
