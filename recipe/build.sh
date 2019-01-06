@@ -1,7 +1,3 @@
-export CFLAGS="-Wall -g -m64 -pipe -O2  -fPIC ${CFLAGS}"
-export CXXLAGS="${CFLAGS} ${CXXLAGS}"
-export CPPFLAGS="-I${PREFIX}/include ${CPPFLAGS}"
-export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"
 export ESMF_DIR=`pwd`"/esmf"
 export ESMP_source="ESMP"
 export ESMF_PTHREADS="OFF"
@@ -11,10 +7,6 @@ export ESMF_COMPILER="gfortran"
 export ESMF_ABI="64"
 if [ `uname` == Darwin ]; then
     export ESMF_OPENMP="OFF"
-    export CC="/usr/bin/gcc"
-    export FC=${PREFIX}/bin/gfortran
-    export F77=${PREFIX}/bin/gfortran
-    export F90=${PREFIX}/bin/gfortran
 else
     export ESMF_OPENMP="ON"
 fi
